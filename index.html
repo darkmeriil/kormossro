@@ -1,207 +1,221 @@
 <!DOCTYPE html>
-
 <html lang="sk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KORMOS s.r.o. | Účtovníctvo a daňové poradenstvo</title>
     <meta name="description" content="Komplexné účtovné služby pre živnostníkov, malé a stredné firmy. Účtovníctvo, mzdy, daňové priznania a odborné poradenstvo.">
-
-```
-<style>
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    :root {
-        --primary: #0f172a;
-        --secondary: #1e293b;
-        --accent: #0ea5e9;
-        --light: #f8fafc;
-        --gray: #64748b;
-        --white: #ffffff;
-    }
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        color: var(--primary);
-        line-height: 1.6;
-        background: var(--white);
-    }
-
-    .container {
-        width: min(1200px, 90%);
-        margin: 0 auto;
-    }
-
-    header {
-        position: fixed;
-        width: 100%;
-        top: 0;
-        background: rgba(255,255,255,0.95);
-        backdrop-filter: blur(10px);
-        z-index: 1000;
-        border-bottom: 1px solid #e2e8f0;
-    }
-
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem 0;
-    }
-
-    .logo {
-        font-size: 1.4rem;
-        font-weight: bold;
-        color: var(--primary);
-    }
-
-    .nav-links {
-        display: flex;
-        gap: 2rem;
-    }
-
-    .nav-links a {
-        text-decoration: none;
-        color: var(--primary);
-        font-weight: 600;
-    }
-
-    .hero {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-        background:
-            linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
-            url("assets/background.avif");
-        background-size: cover;
-        background-position: center;
-        color: white;
-        text-align: center;
-    }
-
-    .hero h1 {
-        font-size: clamp(2.5rem, 5vw, 4.5rem);
-        margin-bottom: 1rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-        max-width: 800px;
-        margin: 0 auto 2rem;
-    }
-
-    .btn {
-        display: inline-block;
-        padding: 14px 30px;
-        background: var(--accent);
-        color: white;
-        text-decoration: none;
-        border-radius: 8px;
-        font-weight: bold;
-        transition: .3s;
-    }
-
-    .btn:hover {
-        transform: translateY(-2px);
-    }
-
-    section {
-        padding: 100px 0;
-    }
-
-    h2 {
-        text-align: center;
-        font-size: 2.3rem;
-        margin-bottom: 1rem;
-    }
-
-    .section-description {
-        text-align: center;
-        color: var(--gray);
-        max-width: 800px;
-        margin: 0 auto 4rem;
-    }
-
-    .services {
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-        gap: 2rem;
-    }
-
-    .card {
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        border: 1px solid #e2e8f0;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    }
-
-    .card h3 {
-        margin-bottom: 1rem;
-    }
-
-    .about {
-        background: var(--light);
-    }
-
-    .about-content {
-        max-width: 900px;
-        margin: auto;
-        text-align: center;
-    }
-
-    .stats {
-        display: grid;
-        grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-        gap: 1.5rem;
-        margin-top: 3rem;
-    }
-
-    .stat {
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-    }
-
-    .stat strong {
-        display: block;
-        font-size: 1.2rem;
-    }
-
-    .contact {
-        text-align: center;
-    }
-
-    .contact-box {
-        max-width: 700px;
-        margin: auto;
-        background: var(--light);
-        padding: 3rem;
-        border-radius: 12px;
-    }
-
-    footer {
-        background: var(--primary);
-        color: white;
-        text-align: center;
-        padding: 2rem;
-    }
-
-    @media(max-width:768px){
-        .nav-links{
-            display:none;
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    }
-</style>
 
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent: #0ea5e9;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --white: #ffffff;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--primary);
+            line-height: 1.6;
+            background: var(--white);
+        }
+
+        .container {
+            width: min(1200px, 90%);
+            margin: 0 auto;
+        }
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(rgba(15,23,42,0.85), rgba(15,23,42,0.85)),
+                url("assets/background.avif");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: .3s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            text-align: center;
+            color: var(--gray);
+            max-width: 800px;
+            margin: 0 auto 4rem;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .about {
+            background: var(--light);
+        }
+
+        .about-content {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .stat {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact-box {
+            max-width: 700px;
+            margin: auto;
+            background: var(--light);
+            padding: 3rem;
+            border-radius: 12px;
+        }
+
+        /* Štýlovanie pre generovaný email link */
+        .secure-mail {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+
+        .secure-mail:hover {
+            opacity: 0.8;
+        }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .credits {
+            margin-top: 0.5rem;
+            font-size: 0.85rem;
+            color: var(--gray);
+        }
+
+        @media(max-width:768px){
+            .nav-links{
+                display:none;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -209,156 +223,152 @@
     <div class="container">
         <nav>
             <div class="logo">KORMOS s.r.o.</div>
-
-
-        <div class="nav-links">
-            <a href="#services">Služby</a>
-            <a href="#about">O spoločnosti</a>
-            <a href="#contact">Kontakt</a>
-        </div>
-    </nav>
-</div>
-
-
+            <div class="nav-links">
+                <a href="#services">Služby</a>
+                <a href="#about">O spoločnosti</a>
+                <a href="#contact">Kontakt</a>
+            </div>
+        </nav>
+    </div>
 </header>
 
 <section class="hero">
     <div class="container">
         <h1>Profesionálne účtovníctvo pre vaše podnikanie</h1>
-
-
-    <p>
-        Komplexné účtovné služby pre živnostníkov, malé a stredné firmy.
-        Presné účtovníctvo, mzdy, daňové priznania a odborné poradenstvo,
-        aby ste sa mohli naplno venovať rozvoju svojho podnikania.
-    </p>
-
-    <a href="#contact" class="btn">Kontaktujte nás</a>
-</div>
-
-
+        <p>
+            Komplexné účtovné služby pre živnostníkov, malé a stredné firmy.
+            Presné účtovníctvo, mzdy, daňové priznania a odborné poradenstvo,
+            aby ste sa mohli naplno venovať rozvoju svojho podnikania.
+        </p>
+        <a href="#contact" class="btn">Kontaktujte nás</a>
+    </div>
 </section>
 
 <section id="services">
     <div class="container">
         <h2>Naše služby</h2>
+        <p class="section-description">
+            Poskytujeme spoľahlivé a transparentné účtovné služby
+            prispôsobené potrebám každého klienta.
+        </p>
 
+        <div class="services">
+            <div class="card">
+                <h3>Vedenie účtovníctva</h3>
+                <p>Jednoduché aj podvojné účtovníctvo pre živnostníkov a spoločnosti.</p>
+            </div>
 
-    <p class="section-description">
-        Poskytujeme spoľahlivé a transparentné účtovné služby
-        prispôsobené potrebám každého klienta.
-    </p>
+            <div class="card">
+                <h3>Spracovanie miezd</h3>
+                <p>Kompletná mzdová agenda vrátane výkazov a povinných hlásení.</p>
+            </div>
 
-    <div class="services">
-        <div class="card">
-            <h3>Vedenie účtovníctva</h3>
-            <p>Jednoduché aj podvojné účtovníctvo pre živnostníkov a spoločnosti.</p>
-        </div>
+            <div class="card">
+                <h3>Daňové priznania</h3>
+                <p>Príprava a podávanie daňových priznaní v súlade s legislatívou.</p>
+            </div>
 
-        <div class="card">
-            <h3>Spracovanie miezd</h3>
-            <p>Kompletná mzdová agenda vrátane výkazov a povinných hlásení.</p>
-        </div>
-
-        <div class="card">
-            <h3>Daňové priznania</h3>
-            <p>Príprava a podávanie daňových priznaní v súlade s legislatívou.</p>
-        </div>
-
-        <div class="card">
-            <h3>Komunikácia s úradmi</h3>
-            <p>Zastupovanie a komunikácia s finančnou správou, poisťovňami a úradmi.</p>
+            <div class="card">
+                <h3>Komunikácia s úradmi</h3>
+                <p>Zastupovanie a komunikácia s finančnou správou, poisťovňami a úradmi.</p>
+            </div>
         </div>
     </div>
-</div>
-
 </section>
 
 <section id="about" class="about">
     <div class="container">
         <div class="about-content">
             <h2>O spoločnosti KORMOS s.r.o.</h2>
+            <p>
+                Naším cieľom je poskytovať presné, transparentné a efektívne účtovné služby,
+                ktoré podporujú rast a dlhodobú stabilitu podnikania našich klientov.
+                Staviame na individuálnom prístupe, spoľahlivosti a odborných skúsenostiach.
+            </p>
 
-        <p>
-            Naším cieľom je poskytovať presné, transparentné a efektívne účtovné služby,
-            ktoré podporujú rast a dlhodobú stabilitu podnikania našich klientov.
-            Staviame na individuálnom prístupe, spoľahlivosti a odborných skúsenostiach.
-        </p>
+            <div class="stats">
+                <div class="stat">
+                    <strong>IČO</strong>
+                    45942480
+                </div>
 
-        <div class="stats">
-            <div class="stat">
-                <strong>IČO</strong>
-                45942480
-            </div>
+                <div class="stat">
+                    <strong>DIČ</strong>
+                    2023157719
+                </div>
 
-            <div class="stat">
-                <strong>DIČ</strong>
-                2023157719
-            </div>
+                <div class="stat">
+                    <strong>IČ DPH</strong>
+                    SK2023157719
+                </div>
 
-            <div class="stat">
-                <strong>IČ DPH</strong>
-                SK2023157719
-            </div>
+                <div class="stat">
+                    <strong>Vznik spoločnosti</strong>
+                    22.12.2010
+                </div>
 
-            <div class="stat">
-                <strong>Vznik spoločnosti</strong>
-                22.12.2010
-            </div>
+                <div class="stat">
+                    <strong>SK NACE</strong>
+                    6920
+                </div>
 
-            <div class="stat">
-                <strong>SK NACE</strong>
-                6920
-            </div>
-
-            <div class="stat">
-                <strong>Registrácia DPH</strong>
-                od 1.9.2017
+                <div class="stat">
+                    <strong>Registrácia DPH</strong>
+                    od 1.9.2017
+                </div>
             </div>
         </div>
     </div>
-</div>
-
 </section>
 
 <section id="contact" class="contact">
     <div class="container">
         <h2>Kontakt</h2>
-
-    <div class="contact-box">
-        <h3>KORMOS s.r.o.</h3>
-        <p><a href="mailto:info@kormossro.sk">info@kormossro.sk</a></p>
-        <br>
-        <p>
-            Pod Lesom 1010/18<br>
-            060 01 Kežmarok<br>
-            Slovenská republika
-        </p>
-
-        <br>
-
-        <p>
-            IČO: 45942480<br>
-            DIČ: 2023157719<br>
-            IČ DPH: SK2023157719
-        </p>
+        <div class="contact-box">
+            <h3>KORMOS s.r.o.</h3>
+            
+            <p id="secure-email-target">Načítavam kontakt...</p>
+            
+            <br>
+            <p>
+                Pod Lesom 1010/18<br>
+                060 01 Kežmarok<br>
+                Slovenská republika
+            </p>
+            <br>
+            <p>
+                IČO: 45942480<br>
+                DIČ: 2023157719<br>
+                IČ DPH: SK2023157719
+            </p>
+        </div>
     </div>
-</div>
-
 </section>
 
 <footer>
     <p>
-        © <span id="year"></span> KORMOS s.r.o.
+        &copy; <span id="year"></span> KORMOS s.r.o. All rights reserved.
     </p>
-
     <p class="credits">
-        Designed & Developed by RZeon
+        Designed & Developed by <strong>RZeon</strong>
     </p>
 </footer>
 
 <script>
+    // Aktuálny rok v pätičke
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Ochrana pred spam botmi pomocou JavaScriptu
+    window.addEventListener("DOMContentLoaded", function() {
+        var localPart = "info";
+        var domainPart = "kormossro.sk";
+        var emailAddress = localPart + "@" + domainPart;
+        
+        var container = document.getElementById("secure-email-target");
+        if (container) {
+            container.innerHTML = '<a href="mailto:' + emailAddress + '" class="secure-mail">' + emailAddress + '</a>';
+        }
+    });
 </script>
 
 </body>
